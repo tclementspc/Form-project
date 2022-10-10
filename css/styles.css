@@ -1,0 +1,219 @@
+#appointment {
+  margin-top: 25px;
+}
+
+input {
+  height: 22px;
+}
+#title {
+  font-size: 20px;
+  padding-left: 100px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-weight: bold;
+}
+.app {
+  align-items: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+#myfile {
+  padding: 1px;
+}
+body {
+  color: #203354;
+  font-size: 14px;
+  font-family: Sans-serif;
+  align-items: center;
+  margin-left: 25px auto;
+  justify-content: center;
+  background: #fece0c;
+}
+.wrapper {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-25%, -25%);
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(254, 236, 164, 1);
+  justify-content: center;
+}
+.wrapper p {
+  text-align: center;
+}
+.wrapper .input_field {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.wrapper .input_field input[type="text"],
+.wrapper textarea {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+.wrapper #error_message {
+  margin-bottom: 20px;
+  padding: 0px;
+  background: #fe8b8e;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+h5 {
+  padding-top: 7px;
+  color: red;
+}
+.submission {
+  margin-top: 7px;
+}
+
+.wrapper textarea {
+  height: 100px;
+  resize: none;
+}
+#cyears {
+  width: 8px;
+}
+#country {
+  padding-left: 5px;
+  margin-left: 5px;
+}
+#relocate {
+  margin-left: 5px;
+}
+#graduate {
+  margin-left: 5px;
+}
+
+#employment-form input {
+  height: 20px;
+  padding: 0 3px;
+  margin: 3px;
+  font-size: 14px;
+  color: #203354;
+}
+.qmail {
+  padding-bottom: 1px;
+}
+
+label {
+  color: #203354;
+  font-size: 14px;
+  font-family: Sans-serif;
+  font-weight: bold;
+}
+h4 {
+  color: #203354;
+  font-size: 14px;
+  font-family: Sans-serif;
+}
+.citizenship {
+  padding-bottom: 10px;
+}
+.image {
+  position: relative;
+  border-radius: 8px;
+}
+img {
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+#major {
+  margin-bottom: 1px;
+}
+img {
+  width: 160px;
+}
+#birthday {
+  padding-top: 2px;
+}
+
+.glow-on-hover {
+  width: 210px;
+  height: 25px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #0504aa;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #0504aa;
+  cursor: pointer;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0504aa;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

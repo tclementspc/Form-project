@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APPLICATION</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div
+        class="image"
+        style="
+          display: inline-block;
+          vertical-align: top;
+          flex-direction: center;
+        "
+      >
+        <img src="/img/Prestige Best.png" class="plogo" alt="logo" />
+      </div>
+      <div style="display: inline-block" class="app">
+        <p id="title"><strong>EMPLOYMENT APPLICATION</strong></p>
+      </div>
+      <div id="error_message"></div>
+      <form
+        action="/"
+        id="employment-form"
+        onSubmit="return validation()"
+        method="GET"
+      >
+        <h4>Personal Information:</h4>
+        <div class="input_field">
+          <label for="name"><strong>Full Name</strong></label>
+          <input
+            type="text"
+            id="name"
+            type="text"
+            maxlength="40"
+            size="60"
+            placeholder="Enter your first and last name"
+            pattern="[A-Za-z ]{1,32}"
+            required
+          />
+        </div>
+        <div class="input_field">
+          <label for="address>"><strong>Address</strong></label>
+          <input
+            type="text"
+            id="address"
+            size="62"
+            placeholder="Enter your complete street address"
+            required
+          />
+        </div>
+        <div class="input_field">
+          <label for="location"><strong>City, State and Zip</strong></label>
+          <input
+            type="text"
+            id="city"
+            size="52"
+            placeholder="Enter your city, state, zip code"
+            required
+          />
+        </div>
+        <div class="citizenship">
+          <label for="country"><stong>Country of Citizenship </stong></label>
+          <select id="country">
+            <option value="london">London</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+        <div>
+          <label for="relocate"
+            ><strong>Are you willing to relocate? </strong></label
+          >
+          <select id="relocate">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div>
+          <label for="birthday" id="birthday"
+            ><strong>Enter your birthday:</strong></label
+          >
+          <input type="date" id="birth" name="birthday" required />
+        </div>
+        <div class="input_field">
+          <label for="phone"
+            ><strong>Enter your telephone number:</strong></label
+          >
+          <input
+            type="text"
+            id="phone"
+            placeholder="Enter numbers only"
+            required
+          />
+        </div>
+        <div class="input_field" id="qmail">
+          <label for="email"
+            ><strong>What is your email address?</strong></label
+          >
+          <input
+            id="email"
+            type="text"
+            placeholder="hello@sampleemail.com: "
+            required
+          />
+        </div>
+        <div>
+          <h4>Educational Background:</h4>
+          <label><strong>Did you graduate from college?</strong></label>
+          <select id="graduate" name="graduate">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <!--- add options here -->
+        <div class="input_field">
+          <label for="college">What college did you attend?</label>
+          <input
+            type="text"
+            id="school"
+            placeholder="Enter your college or university"
+            size="40"
+          />
+        </div>
+        <div class="input_field">
+          <label for="graduate"
+            >What year did you graduate from college? Provide the 4 digit
+            year.</label
+          >
+          <input
+            type="number"
+            size="13"
+            placeholder="XXXX"
+            min="1960"
+            max="2022"
+          />
+          <!--add option here -->
+        </div>
+        <div>
+          <label for="gradDate"
+            >How many years of college did you complete?</label
+          >
+          <input type="number" min="0" max="12" required />
+        </div>
+        <div class="input_field">
+          <label for="major"
+            ><strong>What was your college major?</strong></label
+          >
+          <input
+            type="text"
+            id="major"
+            size="25"
+            placeholder="Enter your college major: "
+          />
+        </div>
+        <div class="highschool">
+          <h4>Did you graduate from high school?</h4>
+          <input type="radio" id="html" name="high_school" value="HTML" />
+          <label for="html">Yes</label>
+          <input type="radio" id="css" name="high_school" value="CSS" />
+          <label for="css">No</label>
+
+          <!--put options here -->
+        </div>
+
+        <div>
+          <label for="time" id="appointment"
+            ><strong
+              >What is the best date and time to contact you?</strong
+            ></label
+          >
+          <input type="datetime-local" />
+        </div>
+        <!--this will be a select input field -->
+
+        <div class="input_field">
+          <h4>Job Qualifications:</h4>
+
+          <h4>What makes you the best candidate to fill this position?</h4>
+
+          <textarea
+            id="qualifications"
+            name="subject"
+            placeholder="Type your answer here..."
+            required
+          ></textarea>
+          <!--this will be a text input field -->
+        </div>
+        <div>
+          <h4>
+            Please upload a copy of an updated resume, which includes the last 7
+            years of employment.
+          </h4>
+          <h5>
+            <strong
+              >Click on the "Choose File" button to upload your resume:</strong
+            >
+          </h5>
+          <label for="file">Choose File!</label>
+          <input type="file" id="myfile" name="filename" required />
+        </div>
+        <div class="submit">
+          <h4 class="submission">
+            Click the "Submit" button when you are done completing the
+            application.
+          </h4>
+          <button type="submit" id="employment-form" class="glow-on-hover">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
